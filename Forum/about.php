@@ -19,7 +19,7 @@
              expert answers, and contribute to the motorcycle enthusiast community. 
              Since 2024, we've been dedicated to fostering a vibrant and supportive 
              environment for sharing knowledge and experiences about all things motorcycle-related.</p>
-        <p>&copy; <?php echo date("Y"); ?> Forum Website. All rights reserved.</p>
+        <p>&copy; <?php echo date("Y"); ?> Wheelie Wisdom. All rights reserved.</p>
     </div>
 </div>
 </body>
