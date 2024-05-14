@@ -21,7 +21,7 @@ body {
 .wrapper h2 {
     margin-bottom: 5%;
     text-align: center;
-    color: #333; /* Dark grey text color */
+    color: #c2c2c2; /* Dark grey text color */
 }
 
 .form-group {
@@ -31,7 +31,7 @@ body {
 .form-group label {
     display: block;
     margin-bottom: 2%;
-    color: #333; /* Dark grey text color */
+    color: #c2c2c2; /* Dark grey text color */
 }
 
 .form-control {
@@ -39,8 +39,8 @@ body {
     padding: 3%;
     font-size: 16px;
     border-radius: 5px;
-    border: 1px solid #ccc; /* Light grey border */
-    background-color: #555; /* Dark grey background */
+    border: 2px solid #000000; /* Light grey border */
+    background-color: #c2c2c2; /* Dark grey background */
     color: #fff; /* White text color */
 }
 
@@ -66,20 +66,20 @@ body {
 }
 
 .btn-primary {
-    background-color: #333; /* Dark grey button */
+    background-color: #000000; /* Dark grey button */
 }
 
 .btn-primary:hover {
-    background-color: #555; /* Light grey button */
+    background-color: #c2c2c2; /* Light grey button */
 }
 
 .btn-default {
     background-color: #ccc; /* Light grey button */
-    color: #333; /* Dark grey text color */
+    color: #000000; /* Dark grey text color */
 }
 
 .btn-default:hover {
-    background-color: #b3b3b3; /* Darker grey hover */
+    background-color: #c2c2c2; /* Darker grey hover */
 }
 
 /* Additional styles for post.php page */
@@ -96,8 +96,8 @@ body {
 }
 
 .question {
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: #c2c2c2;
+    border: 2px solid #000000;
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 20px;
@@ -116,7 +116,7 @@ body {
     padding: 10px;
     font-size: 16px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 2px solid #000000;
 }
 
 .question input[type="submit"] {
@@ -127,11 +127,11 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #333; /* Dark grey button */
+    background-color: #000000; /* Dark grey button */
 }
 
 .question input[type="submit"]:hover {
-    background-color: #555; /* Light grey button */
+    background-color: #c2c2c2; /* Light grey button */
 }
 
 /* Additional styles for about.php page */
@@ -140,12 +140,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 50vh;
-    background-color: #333;
+    background-color: #000000;
 }
 
 .about-section {
     border-radius: 50%;
-    background-color: #fff;
+    background-color: #c2c2c2;
     padding: 500px; /* Adjust padding as needed */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add shadow effect */
     max-width: 90%;
@@ -155,18 +155,18 @@ body {
 .container.about-page h1 {
     margin-bottom: 20px;
     font-size: 75px;
-    color: #007bff;
+    color: #c2c2c2;
 }
 
 .container.about-page p {
     margin-bottom: 5px;
     font-size: 24px;
     line-height: 1.5;
-    color: #555;
+    color: #000000;
 }
 
 .container.about-page p:hover {
-    color: #005f0d;
+    color: #c2c2c2;
 }
 
 /* Additional styles for post listing */
@@ -175,8 +175,8 @@ body {
 }
 
 .post {
-    background-color: #555;
-    border: 1px solid #000000;
+    background-color: #c2c2c2;
+    border: 2px solid #000000;
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 20px;
@@ -191,13 +191,13 @@ body {
 }
 
 .post a {
-    color: #005f0d;
+    color: #000000;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .post a:hover {
-    color: #00a71c;
+    color: #c2c2c2;
 }
 
 /* Navbar styles */
