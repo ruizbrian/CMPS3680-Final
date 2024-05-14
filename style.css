@@ -323,3 +323,20 @@ footer{
 .table-row .last-reply{
     flex: 15%;
 }
+
+/* Pagination */
+.pagination{
+    padding: 20px;
+    font-size:15px;
+}
+
+.pagination a{
+    color:#fff
+    margin-inline:5px;
+    padding:5px 10px;
+    border: solid 0.5px #fff;
+}
+
+.pagination a:hover{
+    opacity: 0.5;
+}
