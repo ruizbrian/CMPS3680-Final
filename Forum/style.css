@@ -210,17 +210,18 @@ body {
 }
 
 .navbar a {
-    color: #fff; /* White text color */
+    color: #000000; /* White text color */
     margin-right: 20px;
     text-decoration: none;
 }
 
 .navbar a:hover {
-    color: #b3b3b3; /* Light grey hover color */
+    background-color: #c2c2c2;
+    color: #000000; /* Light grey hover color */
 }
 
 .navbar-brand {
-    color: #fff; /* White text color for brand */
+    color: #000000; /* White text color for brand */
     font-weight: bold; /* Bold font for brand */
     text-decoration: none;
 }
