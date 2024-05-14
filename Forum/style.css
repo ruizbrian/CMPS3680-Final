@@ -206,38 +206,42 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #333; 
-    border-radius: 20px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 19%;
+    /* background-color: #333; Dark grey background */
+    /* border-radius: 20px; Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    /* margin-left: 1%;
+    margin-right: 1%; */
 }
 
 .navbar a {
-    color: #000000; 
+    /* color: #000000; White text color */
     margin-right: 20px;
     text-decoration: none;
 }
 
 .navbar a:hover {
     background-color: #c2c2c2;
-    color: #000000; 
+    color: #000000; /* Light grey hover color */
+    border-radius: 25px; /* Rounded corners */
+
 }
 
 .navbar-brand {
-    color: #000000; 
-    font-weight: bold; 
+    /* color: #000000; White text color for brand */
+    font-weight: bold; /* Bold font for brand */
     text-decoration: none;
 }
 
 .navbar-toggler {
-    border: none; 
-    background-color: transparent; 
+    border: none; /* Remove border */
+    background-color: transparent; /* Transparent background */
     cursor: pointer;
 }
 
 .navbar-toggler-icon {
-    width: 24px; 
-    height: 24px; 
+    width: 24px; /* Set width */
+    height: 24px; /* Set height */
     background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/></svg>'); /* Custom SVG icon */
     background-repeat: no-repeat;
     background-size: contain;

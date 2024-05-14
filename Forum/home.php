@@ -27,6 +27,22 @@ $mysqli->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wheelie Wisdom Forum</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-..." crossorigin="anonymous">
+    <!-- Include Bootstrap Icons CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* Custom CSS for positioning the button */
+        .create-post-btn {
+            position: fixed;
+            top: 60px; /* Adjust as needed */
+            right: 20px;
+            z-index: 1000; /* Ensure button appears above other content */
+        }
+    </style>
+    <link rel="icon" href="doodle_wheelie.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="doodle_wheelie.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -34,9 +50,15 @@ $mysqli->close();
 <?php include 'navbar.php'; ?>
 
     <div class="container">
-    
-        <h1>Forum</h1>
-        <a href="post.php">Create New Post</a>
+        <h1><u>Forum</u></h1>
+        
+        <!-- Button for creating a new post -->
+        <a href="post.php" class="btn btn-primary mb-3 create-post-btn">
+    <i class="bi bi-plus d-md-none "></i> <!-- Plus icon shown on medium and larger screens -->
+    <span class="d-none d-md-inline">Create New Post</span> <!-- Text shown on small screens -->
+</a>
+
+        
         <div class="posts">
             <?php if (!empty($posts)) : ?>
                 <?php foreach ($posts as $post) : ?>
@@ -51,5 +73,7 @@ $mysqli->close();
         </div>
     </div>
 </body>
+<?php include 'footer.php'; ?>
+
 
 </html>
