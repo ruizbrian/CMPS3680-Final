@@ -1,19 +1,30 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 // Initialize the session
 session_start();
 
 // Check if the user is already logged in, if yes then redirect them to the welcome page
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-    header("location: welcome.php");
+    header("location: home.php");
     exit;
 }
 
 // Include the database connection file
-require_once "./sql/sqlTools.php";
+require_once('sql/sqlTools.php');
+
+$mysqli = getConnection();
+
 
 // Define variables and initialize with empty values
 $username = $password = "";
 $username_err = $password_err = "";
+
+// Check if the database connection is successful
+if ($mysqli === false) {
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
 
 // Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -63,8 +74,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;
 
-                            // Redirect user to welcome page
-                            header("location: welcome.php");
+                            // Redirect user to home page
+                            header("location: home.php");
                         } else {
                             // Display an error message if password is not valid
                             $password_err = "The password you entered was not valid.";
@@ -96,6 +107,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Link Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -120,6 +133,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
         </form>
     </div>
+
+    <!-- Optional: Link Bootstrap JavaScript if you need Bootstrap components -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
