@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 
 <!DOCTYPE html>
 <html lang="en">
-<?php include 'navbar.php'; ?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,28 +16,28 @@ ini_set('display_errors', 1);
 </head>
 
 <body class="home-page"> <!-- Add the home-page class -->
+    <?php include 'navbar.php'; ?>
     <div class="container">
-
         <p>hello</p>
-<?php 
+        <?php 
         // Check if a specific page is requested
-    $page = isset($_GET['page']) ? $_GET['page'] : 'home';
-    // Include the requested page content
-    switch ($page) {
-        case 'home':
-            include 'index.php';
-            break;
-        case 'about':
-            include 'about.php';
-            break;
-        case 'post':
-            include 'post.php';
-            break;
-        default:
-            include 'index.php'; // Default to home page
-            break;
-    }
-    ?>
+        $page = isset($_GET['page']) ? $_GET['page'] : 'home';
+        // Include the requested page content
+        switch ($page) {
+            case 'home':
+                include 'home.php'; // Consider renaming index.php to home.php for clarity
+                break;
+            case 'about':
+                include 'about.php';
+                break;
+            case 'post':
+                include 'post.php';
+                break;
+            default:
+                include 'home.php'; // Default to home page
+                break;
+        }
+        ?>
     </div>
 </body>
 
