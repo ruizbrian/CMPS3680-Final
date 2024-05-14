@@ -8,6 +8,8 @@
 </head>
 <body>
 
+<?php include 'navbar.php'; ?>
+
 <nav class="navbar">
     <div class="container">
         <div class="navbar-brand">

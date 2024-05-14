@@ -188,3 +188,13 @@ body {
     color: #0056b3;
     transform: scale(1.1);
 }
+
+/* Navbar styles for non-home pages */
+.navbar {
+    display: block;
+}
+
+/* Navbar styles for home page */
+.home-page .navbar {
+    display: none;
+}
