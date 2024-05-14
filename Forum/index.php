@@ -29,11 +29,11 @@ $mysqli->close();
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <div class="container">
+<body class="home-page">
     <?php include 'navbar.php'; ?>
+    <div class="container">
         <h1>Forum</h1>
-        <a href="post.php">Create New Post</a>
+        <a href="post.php" class="btn btn-primary">Create New Post</a>
         <div class="posts">
             <?php if (!empty($posts)) : ?>
                 <?php foreach ($posts as $post) : ?>

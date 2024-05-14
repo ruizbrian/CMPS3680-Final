@@ -163,6 +163,38 @@ body {
     color: #0056b3;
 }
 
+/* Additional styles for post listing */
+.posts {
+    margin-top: 20px;
+}
+
+.post {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.post h2 {
+    margin-bottom: 10px;
+}
+
+.post p {
+    margin-bottom: 10px;
+}
+
+.post a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.post a:hover {
+    color: #0056b3;
+}
+
+
 
 /* Navbar styles for non-home pages */
 .navbar {
