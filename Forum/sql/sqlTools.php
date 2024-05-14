@@ -3,19 +3,15 @@ require_once('config.php');
 
 function getConnection()
 {
-    $mysqli = mysqli_connect(
-        $GLOBALS['servername'],
-        $GLOBALS['username'],
-        $GLOBALS['password'],
-        $GLOBALS['dbname']
-    );
-    if ($mysqli) {
-        return $mysqli;
-    } else {
-        echo 'DATABASE CONNECTION ERROR';
+    global $servername, $username, $password, $dbname;
+    $mysqli = mysqli_connect($servername, $username, $password, $dbname);
+    if (!$mysqli) {
+        echo 'DATABASE CONNECTION ERROR: ' . mysqli_connect_error();
         die();
     }
+    return $mysqli;
 }
+
 
 function closeConnection($conn)
 {
