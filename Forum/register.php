@@ -118,6 +118,8 @@ closeConnection($mysqli);
 </head>
 
 <body>
+<?php include 'navbar.php'; ?>
+
     <div class="wrapper">
         <h2>Register</h2>
         <p>Please fill this form to create an account.</p>
