@@ -2,7 +2,8 @@
 /* General body styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #333; /* Dark grey background */
+    color: #fff; /* White text color */
 }
 
 /* Additional wrapper styles */
@@ -20,7 +21,7 @@ body {
 .wrapper h2 {
     margin-bottom: 5%;
     text-align: center;
-    color: #333;
+    color: #333; /* Dark grey text color */
 }
 
 .form-group {
@@ -30,7 +31,7 @@ body {
 .form-group label {
     display: block;
     margin-bottom: 2%;
-    color: #333;
+    color: #333; /* Dark grey text color */
 }
 
 .form-control {
@@ -38,7 +39,9 @@ body {
     padding: 3%;
     font-size: 16px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc; /* Light grey border */
+    background-color: #555; /* Dark grey background */
+    color: #fff; /* White text color */
 }
 
 .has-error .form-control {
@@ -63,20 +66,20 @@ body {
 }
 
 .btn-primary {
-    background-color: #007bff;
+    background-color: #333; /* Dark grey button */
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+    background-color: #555; /* Light grey button */
 }
 
 .btn-default {
-    background-color: #ccc;
-    color: #333;
+    background-color: #ccc; /* Light grey button */
+    color: #333; /* Dark grey text color */
 }
 
 .btn-default:hover {
-    background-color: #b3b3b3;
+    background-color: #b3b3b3; /* Darker grey hover */
 }
 
 /* Additional styles for post.php page */
@@ -124,10 +127,11 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    background-color: #333; /* Dark grey button */
 }
 
 .question input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #555; /* Light grey button */
 }
 
 /* Additional styles for about.php page */
@@ -200,23 +204,23 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #f8f9fa; /* Light gray background */
+    background-color: #333; /* Dark grey background */
     border-radius: 20px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .navbar a {
-    color: #212529; /* Dark text color */
+    color: #fff; /* White text color */
     margin-right: 20px;
     text-decoration: none;
 }
 
 .navbar a:hover {
-    color: #0056b3; /* Hover color */
+    color: #b3b3b3; /* Light grey hover color */
 }
 
 .navbar-brand {
-    color: #343a40; /* Dark text color for brand */
+    color: #fff; /* White text color for brand */
     font-weight: bold; /* Bold font for brand */
     text-decoration: none;
 }
@@ -230,7 +234,7 @@ body {
 .navbar-toggler-icon {
     width: 24px; /* Set width */
     height: 24px; /* Set height */
-    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path stroke="rgba(0, 0, 0, 0.5)" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/></svg>'); /* Custom SVG icon */
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/></svg>'); /* Custom SVG icon */
     background-repeat: no-repeat;
     background-size: contain;
 }
