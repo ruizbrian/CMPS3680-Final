@@ -141,7 +141,7 @@ body {
 .about-section {
     border-radius: 50%;
     background-color: #fff;
-    padding: 40px; /* Adjust padding as needed */
+    padding: 100px; /* Adjust padding as needed */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add shadow effect */
     max-width: 80%;
 }
