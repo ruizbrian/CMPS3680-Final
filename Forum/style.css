@@ -194,65 +194,43 @@ body {
     color: #0056b3;
 }
 
-
-/* Navbar styles for non-home pages */
+/* Navbar styles */
 .navbar {
-    display: block;
-}
-
-/* Navbar styles for home page */
-.home-page .navbar {
-    display: none;
-}
-/* Additional styles for post.php page */
-.container {
-    text-align: center;
-}
-
-.container form {
-    margin-bottom: 20px;
-}
-
-.questions {
-    text-align: left;
-}
-
-.question {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
-    margin-bottom: 20px;
+    background-color: #f8f9fa; /* Light gray background */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.question p {
-    margin-bottom: 10px;
+.navbar a {
+    color: #212529; /* Dark text color */
+    margin-right: 20px;
+    text-decoration: none;
 }
 
-.question form {
-    margin-top: 10px;
+.navbar a:hover {
+    color: #0056b3; /* Hover color */
 }
 
-.question textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+.navbar-brand {
+    color: #343a40; /* Dark text color for brand */
+    font-weight: bold; /* Bold font for brand */
+    text-decoration: none;
 }
 
-.question input[type="submit"] {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
+.navbar-toggler {
+    border: none; /* Remove border */
+    background-color: transparent; /* Transparent background */
     cursor: pointer;
 }
 
-.question input[type="submit"]:hover {
-    background-color: #0056b3;
+.navbar-toggler-icon {
+    width: 24px; /* Set width */
+    height: 24px; /* Set height */
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path stroke="rgba(0, 0, 0, 0.5)" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/></svg>'); /* Custom SVG icon */
+    background-repeat: no-repeat;
+    background-size: contain;
 }
