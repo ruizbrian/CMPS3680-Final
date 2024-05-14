@@ -171,14 +171,14 @@ body {
     border: 2px solid #007bff;
     border-radius: 20px;
     padding: 20px;
-    display: inline-block; /* Added */
+    display: flex; 
+    justify-content: space-around; 
 }
 
 .container a {
-    display: block; /* Changed from inline-block */
     margin-bottom: 20px;
-    font-size: 50px; /* Reduced font size */
-    letter-spacing: 10px; /* Increased spacing between words */
+    font-size: 50px; 
+    letter-spacing: 10px; 
     text-decoration: none;
     color: #007bff;
     transition: transform 0.3s ease;
@@ -188,8 +188,3 @@ body {
     color: #0056b3;
     transform: scale(1.1);
 }
-
-
-
-
-
