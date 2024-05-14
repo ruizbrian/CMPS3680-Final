@@ -135,7 +135,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 50vh;
 }
 
 .about-section {
@@ -193,7 +193,6 @@ body {
 .post a:hover {
     color: #0056b3;
 }
-
 
 
 /* Navbar styles for non-home pages */
