@@ -164,30 +164,6 @@ body {
     color: #0056b3;
 }
 
-/* Additional styles for index.php/home page */
-.container.index-page {
-    margin-top: 20px;
-    max-width: 80%;
-    border: 2px solid #007bff;
-    border-radius: 20px;
-    padding: 20px;
-    display: flex;
-    justify-content: space-around;
-}
-
-.container.index-page a {
-    margin-bottom: 20px;
-    font-size: 50px;
-    letter-spacing: 10px;
-    text-decoration: none;
-    color: #007bff;
-    transition: transform 0.3s ease;
-}
-
-.container.index-page a:hover {
-    color: #0056b3;
-    transform: scale(1.1);
-}
 
 /* Navbar styles for non-home pages */
 .navbar {
