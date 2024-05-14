@@ -132,11 +132,23 @@ body {
 .container {
     text-align: center;
     margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.about-section {
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 40px; /* Adjust padding as needed */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+    max-width: 80%;
 }
 
 .container h1 {
     margin-bottom: 20px;
-    font-size: 75px; 
+    font-size: 75px;
     color: #007bff;
 }
 
@@ -144,27 +156,29 @@ body {
     margin-bottom: 20px;
     font-size: 24px;
     line-height: 1.5;
-    color: #555; 
+    color: #555;
 }
 
 .container p:hover {
     color: #0056b3;
 }
 
-
 /* Additional styles for index.php/home page */
 .container {
     text-align: center;
-    margin-top: 50px;
-    border: 2px solid #007bff; 
-    border-radius: 20px; 
-    padding: 20px; 
+    margin-top: 20px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    max-width: 90%; 
+    border: 2px solid #007bff;
+    border-radius: 20px;
+    padding: 20px;
 }
 
 .container a {
     display: inline-block;
     margin-bottom: 20px;
-    font-size: 100px;
+    font-size: 80px; 
     text-decoration: none;
     color: #007bff;
     transition: transform 0.3s ease;
@@ -174,5 +188,6 @@ body {
     color: #0056b3;
     transform: scale(1.1);
 }
+
 
 
