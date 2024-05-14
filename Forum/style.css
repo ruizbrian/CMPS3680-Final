@@ -127,3 +127,37 @@ body {
 .question input[type="submit"]:hover {
     background-color: #0056b3;
 }
+
+/* Additional styles for about.php page */
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.container p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Additional styles for index.php/home page */
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.container a {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.container a:hover {
+    color: #0056b3;
+}
