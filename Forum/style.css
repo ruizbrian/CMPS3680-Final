@@ -136,28 +136,43 @@ body {
 
 .container h1 {
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 75px; 
+    color: #007bff;
 }
 
 .container p {
     margin-bottom: 20px;
+    font-size: 24px;
     line-height: 1.5;
+    color: #555; 
 }
+
+.container p:hover {
+    color: #0056b3;
+}
+
 
 /* Additional styles for index.php/home page */
 .container {
     text-align: center;
     margin-top: 50px;
+    border: 2px solid #007bff; 
+    border-radius: 20px; 
+    padding: 20px; 
 }
 
 .container a {
-    display: block;
+    display: inline-block;
     margin-bottom: 20px;
-    font-size: 18px;
+    font-size: 100px;
     text-decoration: none;
     color: #007bff;
+    transition: transform 0.3s ease;
 }
 
 .container a:hover {
     color: #0056b3;
+    transform: scale(1.1);
 }
+
+
