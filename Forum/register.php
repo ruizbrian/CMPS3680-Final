@@ -1,6 +1,6 @@
 <?php
 // Include the database connection file
-include_once('sql/sqlTools.php');
+require_once('sql/sqlTools.php');
 
 // Define variables and initialize with empty values
 $username = $email = $password = $confirm_password = "";
@@ -87,6 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($stmt->execute()) {
                 // Redirect to login page
                 header("location: login.php");
+                exit;
             } else {
                 echo "Oops! Something went wrong. Please try again later.";
             }
@@ -95,10 +96,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->close();
         }
     }
-
-    // Close connection
-    $mysqli->close();
 }
+
 ?>
 
 <!DOCTYPE html>
