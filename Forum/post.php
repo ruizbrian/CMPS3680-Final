@@ -1,55 +1,99 @@
+<?php
+session_start();
+
+// Check if the user is logged in, if not redirect to login page
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("location: login.php");
+    exit;
+}
+
+// Include the database connection file
+require_once "sql/sqlTools.php";
+$mysqli = getConnection();
+
+// Define variables and initialize with empty values
+$title = $content = "";
+$title_err = $content_err = "";
+
+// Processing form data when form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    // Validate title
+    if (empty(trim($_POST["title"]))) {
+        $title_err = "Please enter the title of your post.";
+    } else {
+        $title = trim($_POST["title"]);
+    }
+
+    // Validate content
+    if (empty(trim($_POST["content"]))) {
+        $content_err = "Please enter the content of your post.";
+    } else {
+        $content = trim($_POST["content"]);
+    }
+
+    // Check input errors before inserting into database
+    if (empty($title_err) && empty($content_err)) {
+
+        // Prepare an insert statement
+        $sql = "INSERT INTO posts (user_id, title, content) VALUES (?, ?, ?)";
+
+        if ($stmt = $mysqli->prepare($sql)) {
+            // Bind variables to the prepared statement as parameters
+            $stmt->bind_param("iss", $param_user_id, $param_title, $param_content);
+
+            // Set parameters
+            $param_user_id = $_SESSION["id"];
+            $param_title = $title;
+            $param_content = $content;
+
+            // Attempt to execute the prepared statement
+            if ($stmt->execute()) {
+                // Redirect to home page after successful post
+                header("location: home.php");
+                exit;
+            } else {
+                echo "Oops! Something went wrong. Please try again later.";
+            }
+
+            // Close statement
+            $stmt->close();
+        }
+    }
+
+    // Close connection
+    $mysqli->close();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post Questions - Forum Website</title>
+    <title>Post Question</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <?php include 'navbar.php'; ?>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-..." crossorigin="anonymous">
-
-<div class="container">
-    <h1>Post Questions</h1>
-    <!-- Form for posting questions -->
-    <form action="scripts/post_question.php" method="post">
-        <label for="question">Your Question:</label><br>
-        <textarea id="question" name="question" rows="4" cols="50" required></textarea><br>
-        <input type="submit" value="Post Question">
-    </form>
-    
-    <!-- Display existing questions -->
-    <h2>Existing Questions</h2>
-    <div class="questions">
-        <?php
-        // Include the database connection file
-        include 'includes/db.php';
-
-        // Retrieve existing questions from the database
-        $sql = "SELECT * FROM Questions ORDER BY created_at DESC";
-        $result = mysqli_query($conn, $sql);
-
-        // Display each question
-        while ($row = mysqli_fetch_assoc($result)) {
-            echo "<div class='question'>";
-            echo "<p>" . $row['question'] . "</p>";
-            // Add form for posting comments on each question
-            echo "<form action='scripts/post_comment.php' method='post'>";
-            echo "<input type='hidden' name='question_id' value='" . $row['id'] . "'>";
-            echo "<label for='comment'>Your Comment:</label><br>";
-            echo "<textarea id='comment' name='comment' rows='2' cols='50' required></textarea><br>";
-            echo "<input type='submit' value='Post Comment'>";
-            echo "</form>";
-            echo "</div>";
-        }
-
-        // Close connection
-        mysqli_close($conn);
-        ?>
+    <div class="wrapper">
+        <h2>Create a New Post</h2>
+        <p>Please fill in the following fields to create a new post.</p>
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <div class="form-group <?php echo (!empty($title_err)) ? 'has-error' : ''; ?>">
+                <label>Title</label>
+                <input type="text" name="title" class="form-control" value="<?php echo $title; ?>">
+                <span class="help-block"><?php echo $title_err; ?></span>
+            </div>
+            <div class="form-group <?php echo (!empty($content_err)) ? 'has-error' : ''; ?>">
+                <label>Content</label>
+                <textarea name="content" class="form-control"><?php echo $content; ?></textarea>
+                <span class="help-block"><?php echo $content_err; ?></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Post">
+            </div>
+        </form>
     </div>
-</div>
-
 </body>
 </html>
