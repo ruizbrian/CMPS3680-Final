@@ -76,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="icon" href="doodlewheelie.jpg" type="image/x-icon">
     <link rel="shortcut icon" href="doodlewheelie.jpg" type="image/x-icon">
 </head>
-<body>
+<body class="bg-secondary">
 <?php include 'navbar.php'; ?>
     <div class="wrapper">
         <h2>Create a New Post</h2>

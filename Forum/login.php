@@ -114,7 +114,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 
-<body>
+<body class="bg-secondary">
 <?php include 'navbar.php'; ?>
     <div class="wrapper">
         <h2>Login</h2>

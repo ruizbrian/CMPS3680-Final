@@ -9,7 +9,7 @@
     <link rel="icon" href="doodlewheelie.jpg" type="image/x-icon">
     <link rel="shortcut icon" href="doodlewheelie.jpg" type="image/x-icon">
 </head>
-<body>
+<body class="bg-secondary">
 
 <?php include 'navbar.php'; ?>
 
