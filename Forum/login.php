@@ -109,8 +109,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- Link Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="doodle_wheelie.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="doodle_wheelie.ico" type="image/x-icon">
+    <link rel="icon" href="doodlewheelie.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="doodlewheelie.jpg" type="image/x-icon">
 </head>
 
 

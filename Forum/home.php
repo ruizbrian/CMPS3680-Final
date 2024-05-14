@@ -41,8 +41,8 @@ $mysqli->close();
             z-index: 1000; /* Ensure button appears above other content */
         }
     </style>
-    <link rel="icon" href="doodle_wheelie.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="doodle_wheelie.ico" type="image/x-icon">
+    <link rel="icon" href="doodlewheelie.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="doodlewheelie.jpg" type="image/x-icon">
 </head>
 
 <body>
