@@ -9,7 +9,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 }
 
 // Include the database connection file
-require_once "db.php";
+require_once "./sql/sqlTools.php";
 
 // Define variables and initialize with empty values
 $username = $password = "";

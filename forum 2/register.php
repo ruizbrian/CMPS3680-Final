@@ -1,6 +1,6 @@
 <?php
 // Include the database connection file
-include_once('db.php');
+include_once('sql/sqlTools.php');
 
 // Define variables and initialize with empty values
 $username = $email = $password = $confirm_password = "";
