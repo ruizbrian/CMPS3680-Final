@@ -21,7 +21,7 @@ $mysqli->close();
 
 <!DOCTYPE html>
 <html lang="en">
-
+<?php include 'navbar.php'; ?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,23 +29,29 @@ $mysqli->close();
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <div class="container">
+<body class="home-page"> <!-- Add the home-page class -->
     <?php include 'navbar.php'; ?>
-        <h1>Forum</h1>
-        <a href="post.php">Create New Post</a>
-        <div class="posts">
-            <?php if (!empty($posts)) : ?>
-                <?php foreach ($posts as $post) : ?>
-                    <div class="post">
-                        <h2><a href="view_post.php?id=<?php echo $post['id']; ?>"><?php echo $post['title']; ?></a></h2>
-                        <p>Created on <?php echo $post['created_at']; ?></p>
-                    </div>
-                <?php endforeach; ?>
-            <?php else : ?>
-                <p>No posts found.</p>
-            <?php endif; ?>
-        </div>
+    <div class="container">
+        <p>hello</p>
+        <?php 
+        // Check if a specific page is requested
+        $page = isset($_GET['page']) ? $_GET['page'] : 'home';
+        // Include the requested page content
+        switch ($page) {
+            case 'home':
+                include 'home.php'; // Consider renaming index.php to home.php for clarity
+                break;
+            case 'about':
+                include 'about.php';
+                break;
+            case 'post':
+                include 'post.php';
+                break;
+            default:
+                include 'home.php'; // Default to home page
+                break;
+        }
+        ?>
     </div>
 </body>
 
