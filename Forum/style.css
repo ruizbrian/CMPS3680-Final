@@ -148,8 +148,8 @@ body {
     background-color: #c2c2c2;
     padding: 500px; /* Adjust padding as needed */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add shadow effect */
-    max-width: 90%;
-    max-height: 75%;
+    max-width: 85%;
+    max-height: 45%;
 }
 
 .container.about-page h1 {
