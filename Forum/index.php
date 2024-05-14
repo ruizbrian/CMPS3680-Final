@@ -6,7 +6,7 @@
     <title>Forum Website</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="home-page"> <!-- Add the home-page class -->
 
 <?php include 'navbar.php'; ?>
 

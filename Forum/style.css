@@ -129,7 +129,7 @@ body {
 }
 
 /* Additional styles for about.php page */
-.container {
+.container.about-page {
     text-align: center;
     margin-top: 50px;
     display: flex;
@@ -146,25 +146,25 @@ body {
     max-width: 80%;
 }
 
-.container h1 {
+.container.about-page h1 {
     margin-bottom: 20px;
     font-size: 75px;
     color: #007bff;
 }
 
-.container p {
+.container.about-page p {
     margin-bottom: 20px;
     font-size: 24px;
     line-height: 1.5;
     color: #555;
 }
 
-.container p:hover {
+.container.about-page p:hover {
     color: #0056b3;
 }
 
 /* Additional styles for index.php/home page */
-.container {
+.container.home-page {
     text-align: center;
     margin-top: 20px;
     max-width: 80%;
@@ -175,7 +175,7 @@ body {
     justify-content: space-around; 
 }
 
-.container a {
+.container.home-page a {
     margin-bottom: 20px;
     font-size: 50px; 
     letter-spacing: 10px; 
@@ -184,7 +184,7 @@ body {
     transition: transform 0.3s ease;
 }
 
-.container a:hover {
+.container.home-page a:hover {
     color: #0056b3;
     transform: scale(1.1);
 }
