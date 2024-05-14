@@ -1,8 +1,11 @@
+/* Bootstrap integration */
+/* General body styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
 }
 
+/* Additional wrapper styles */
 .wrapper {
     width: 90%;
     max-width: 360px;
@@ -13,6 +16,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Additional form styles */
 .wrapper h2 {
     margin-bottom: 5%;
     text-align: center;
@@ -46,6 +50,7 @@ body {
     font-size: 14px;
 }
 
+/* Button styles */
 .btn {
     display: inline-block;
     padding: 3% 6%;
@@ -54,7 +59,6 @@ body {
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
     color: #fff;
 }
 
@@ -119,8 +123,6 @@ body {
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
     cursor: pointer;
 }
 
@@ -130,7 +132,6 @@ body {
 
 /* Additional styles for about.php page */
 .container.about-page {
-    text-align: center;
     margin-top: 50px;
     display: flex;
     justify-content: center;
@@ -165,20 +166,19 @@ body {
 
 /* Additional styles for index.php/home page */
 .container.home-page {
-    text-align: center;
     margin-top: 20px;
     max-width: 80%;
     border: 2px solid #007bff;
     border-radius: 20px;
     padding: 20px;
-    display: flex; 
-    justify-content: space-around; 
+    display: flex;
+    justify-content: space-around;
 }
 
 .container.home-page a {
     margin-bottom: 20px;
-    font-size: 50px; 
-    letter-spacing: 10px; 
+    font-size: 50px;
+    letter-spacing: 10px;
     text-decoration: none;
     color: #007bff;
     transition: transform 0.3s ease;
