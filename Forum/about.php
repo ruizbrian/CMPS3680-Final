@@ -21,6 +21,5 @@
         <p>&copy; <?php echo date("Y"); ?> Forum Website. All rights reserved.</p>
     </div>
 </div>
-
 </body>
 </html>

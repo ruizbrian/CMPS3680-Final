@@ -15,7 +15,6 @@
     <?php
     // Check if a specific page is requested
     $page = isset($_GET['page']) ? $_GET['page'] : 'home';
-
     // Include the requested page content
     switch ($page) {
         case 'home':
@@ -33,6 +32,3 @@
     }
     ?>
 </div>
-
-</body>
-</html>
