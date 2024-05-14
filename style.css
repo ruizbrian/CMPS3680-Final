@@ -331,7 +331,7 @@ footer{
 }
 
 .pagination a{
-    color:#fff
+    color:#fff;
     margin-inline:5px;
     padding:5px 10px;
     border: solid 0.5px #fff;
@@ -340,3 +340,12 @@ footer{
 .pagination a:hover{
     opacity: 0.5;
 }
+
+/* Navigation */
+.navigate{
+    margin-block: 20px;
+    font-weight: lighter;
+    font-size: 24px;
+}
+
+navigate
