@@ -74,3 +74,56 @@ body {
 .btn-default:hover {
     background-color: #b3b3b3;
 }
+
+/* Additional styles for post.php page */
+.container {
+    text-align: center;
+}
+
+.container form {
+    margin-bottom: 20px;
+}
+
+.questions {
+    text-align: left;
+}
+
+.question {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.question p {
+    margin-bottom: 10px;
+}
+
+.question form {
+    margin-top: 10px;
+}
+
+.question textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.question input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.question input[type="submit"]:hover {
+    background-color: #0056b3;
+}
