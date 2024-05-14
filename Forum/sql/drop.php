@@ -1,15 +1,15 @@
 <?php
 require_once('sqlTools.php');
 
-$query = "DROP TABLE product";
+$query = "DROP TABLES users, posts, comments";
 
 //MODIFIY DATABASE
 $db = getConnection();
 
 if(mysqli_query($db, $query)) {
-    echo "PRODUCT TABLE SUCCESSFULLY REMOVED\n";
+    echo "FORUM TABLES SUCCESSFULLY REMOVED\n";
 } else {  
-    echo "FAILED TO REMOVE PRODUCT TABLE\n";
+    echo "FAILED TO REMOVE FORUM TABLES\n";
     die();
 }
 
