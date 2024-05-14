@@ -3,19 +3,45 @@ body {
     background-color: #f4f4f4;
 }
 
+.navbar {
+    background-color: #007bff;
+    padding: 10px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
 .wrapper {
-    width: 100%;
-    max-width: 360px;
+    width: 80%;
+    margin: 50px auto;
     background-color: #fff;
     border-radius: 8px;
-    padding: 5%;
-    margin: 10% auto;
+    padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .wrapper h2 {
     margin-bottom: 5%;
     text-align: center;
+    color: #333;
+}
+
+.wrapper p {
     color: #333;
 }
 
